@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
+
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <main id="main-doc">
+    
+        <nav id="navbar">
+            <header><h2>CSS Resume</h2></header>
+                <a class="nav-link" href="#Introducao">Introducao</a><hr>
+                <a class="nav-link" href="#Seletores">Seletores</a><hr>
+                <a class="nav-link" href="#Sintaxe">Sintaxe</a><hr>
+                <a class="nav-link" href="#CSS_externo">CSS Externo</a><hr>
+                <a class="nav-link" href="#CSS_interno">CSS Interno</a><hr>
+                <a class="nav-link" href="#CSS_embutido">CSS Embutido</a><hr>
+                <a class="nav-link" href="#Referencias">Referencias</a><hr>
+        </nav>
+       
+        
+        <section class="main-section" id="Introducao">
+            <header><h2>Introducao</h2></header>
+                <p><strong>CSS3</strong> é a terceira mais nova versão das famosas Cascading Style Sheets (ou simplesmente CSS), pela qual se define estilos para um projeto web (página de internet). 
+                    Com efeitos de transição, imagem, imagem de fundo/background e outros, pode-se criar estilos únicos para seus projetos web, alterando diversos aspectos de design no layout da página.</p>
+                <p>A principal função do CSS3 é abolir as imagens de plano/Background de fundo, bordas arredondadas, apresentar transições e efeitos para criar animações de vários tipos, como um simples
+                    relógio de ponteiros.</p>
+                <p>Isso se deve aos novos browsers/navegadores que estão chegando com suporte à essa linguagem, como o Google Chrome, Opera, Internet Explorer 9, Safari e Mozilla Firefox. Assim, o CSS3 
+                    facilitará o trabalho dos profissionais de front-end e também a utilização de sites pelos usuários.</p>
+        </section>
+        
+        
+        <section class="main-section" id="Seletores">
+            <header><h2>Seletores</h2></header>
+                <p>Definição de estilo é um conjunto de propriedades visuais para um elemento, o CSS define regras que 
+                    fazem as definições de estilo casarem com um elemento ou grupo de elemento, o documento pode conter um bloco de CSS num elemento style ou usando o elemento link apontando para 
+                    um arquivo externo que contenha o bloco CSS.</p>
+                <p>Para uso com o CSS, foi criado o atributo class que todo elemento pode conter.</p>
+                <p>As regras de casamento para o CSS são chamadas de seletores, uma definição de estilo pode ser casada com um seletor ou um grupo de seletores separados por vírgula, um seletor pode casar um elemento por:</p>
+                <li>elemento do tipo : element_name { style definition; }</li>
+                <li>elemento do tipo com a classe : element_name.class_name { style definition; }</li>
+                <li>todos os elementos com a classe : .class_name { style definition; }</li>
+                <li>o elemento com o id : #id_of_element { style definition; }</li>
+                <li>casamento de um grupo : element_name_01, element_name_02, .class_name { style definition; }</li>
+        </section>        
+        
+        
+        <section class="main-section" id="Sintaxe">
+            <header><h2>Sintaxe</h2></header>
+                <code>
+                    /* comentário em css, semelhante aos da linguagem c */ body<br />
+                    {<br  />
+                        font-family: Arial, Verdana, sans-serif;<br  />
+                        background-color: #FFF;<br  />
+                        margin: 5px 10px;<br  />
+                    }
+                </code>
+            <p>O código acima define fonte padrão Arial, caso não exista, substitui por Verdana, caso não exista, define qualquer fonte sans-serif. Define também a cor de fundo do corpo da página.
+                Sua necessidade adveio do fato do HTML, aos poucos, ter deixado de ser usado apenas para criação de conteúdo na web, e portanto havia uma mistura de formatação e conteúdo textual dentro do código de uma mesma página. 
+                Contudo, na criação de um grande portal, fica quase impossível manter uma identidade visual, bem como a produtividade do desenvolvedor. 
+                É nesse ponto que entra o CSS.</p>
+            <p>As especificações do CSS podem ser obtidas no site da W3C "World Wide Web Consortium", um consórcio de diversas empresas que buscam estabelecer padrões para a Internet.
+                É importante notar que nenhum navegador suporta igualmente as definições do CSS. Desta forma, o web designer deve sempre testar suas folhas de estilo em navegadores de vários fabricantes, e preferencialmente em mais de uma versão, 
+                para se certificar de que o que foi codificado realmente seja apresentado da forma desejada.</p>
+        </section>
+        
+        
+        <section class="main-section" id="CSS_externo">
+            <header><h2>CSS Externo</h2></header>
+               <h3>Três maneiras de inserir CSS</h3>
+                <h4>Existem três maneiras de inserir uma folha de estilos:</h4>
+                    <p>Quando um navegador lê uma folha de estilos, ele formata o documento HTML de acordo com as informações na folha de estilos.</p>
+                    <li>CSS externo</li>
+                    <li>CSS interno</li>
+                    <li>CSS embutido</li>
+                
+                <h4>CSS Externo</h4>
+                    <p>Os estilos externos são definidos no elemento <<i>link</i>>, na seção <<i>head</i>> de uma página HTML:</p>
+                        <code>link rel="stylesheet" type="text/css" href="mystyle.css"</code>
+                
+                <h4><strong>"mystyle.css"</strong></h4>
+                    <p>Uma folha de estilo externa pode ser escrita em qualquer editor de texto e deve ser salva com uma extensão .css.
+                        O arquivo .css externo não deve conter nenhuma marca HTML.
+                        Aqui está como o arquivo "mystyle.css" se parece:</p>
+                    <code>
+                        body {
+                            background-color: lightblue;
+                          } <br />
+                          
+                          h1 {
+                            color: navy;
+                            margin-left: 20px;
+                          }
+                    </code>
+        </section>
+
+
+        <section class="main-section" id="CSS_interno">
+            <header><h2>CSS interno</h2></header>
+                <p>Uma folha de estilo interna pode ser usada se uma única página HTML tiver um estilo exclusivo.
+                        O estilo interno é definido dentro do elemento <<i>style</i>>, dentro da seção principal.</p>
+                <h4>Exemplo</h4>
+                    <p>Os estilos internos são definidos dentro do elemento <<i>style</i>>, dentro da seção <<i>head</i>> de uma página HTML:</p>
+                    <code>
+                        <<i>!DOCTYPE html</i>><br/>
+                            <<i>html</i>><br/>
+                            <<i>head</i>><br/>
+                            <<i>style</i>><br/>
+                            body {<br/>
+                            background-color: linen;<br/>
+                            }<br/>
+
+                            h1 {<br/>
+                            color: maroon;<br/>
+                            margin-left: 40px;<br/>
+                            }<br/>
+                            <<i>/style</i>><br/>
+                            <<i>/head</i>><br/>
+                            <<i>body</i>><br/>
+                    </code>
+        </section>
+
+
+        <section class="main-section" id="CSS_embutido">
+                <header><h4>CSS embutido</h4></header>
+                    <p>Um estilo embutido pode ser usado para aplicar um estilo exclusivo a um único elemento.
+                        Para usar estilos embutidos, adicione o atributo style ao elemento relevante. O atributo style pode conter qualquer propriedade CSS.</p>
+                <h4>Exemplo</h4>
+                    <p>Os estilos embutidos são definidos no atributo "style" do elemento relevante:</p>
+                    <code>
+                        <<i>!DOCTYPE html</i>><br/>
+                        <<i>html</i>><br/>
+                        <<i>body</i>><br/>
+                        
+                        <<i>h1 style="color:blue;text-align:center;">This is a heading<<i>/h1</i>><br/>
+                        <<i>p style="color:red;">This is a paragraph.<<i>/p</i>><br/>
+                        
+                        <<i>/body</i>><br/>
+                        <<i>/html</i>><br/>
+                    </code>
+        </section>
+        
+        
+        <section class="main-section" id="Referencias">
+            <header><h2>Referencias</h2></header>
+            <p>«Cascading Style Sheets». www.w3.org (em inglês). Consultado em 25 de março de 2017</p>
+            <p>«Como Inserir CSS». www.escolaw3.com. Consultado em 25 de março de 2017.</p>    
+            <p>«W3C CSS2.1 specification for rule sets, declaration blocks, and selectors». W3.org. Consultado em 20 de junho de 2009.</p>    
+            <p>«Sintaxe e Seletores CSS». www.escolaw3.com. Consultado em 25 de março de 2017.</p>    
+            <p>Ver a definição completa de seletores no website W3C.</p>
+        </section>
+    
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

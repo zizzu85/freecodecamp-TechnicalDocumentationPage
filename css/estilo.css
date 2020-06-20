@@ -1,0 +1,113 @@
+body{
+    width: 80vw;
+    text-align: justify;
+}
+
+#main-doc{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "Introducao"
+        "Seletores"
+        "Sintaxe"
+        "CSSexterno"
+        "CSSinterno"
+        "CSSembutido"
+        "Referencias";
+}
+
+
+#Introducao{
+    grid-area: Introducao ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+
+}
+
+
+#Seletores{
+    grid-area: Seletores ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+
+#CSS_externo{
+    grid-area: CSSexterno ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+
+#CSS_interno{
+    grid-area: CSSinterno ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+
+#CSS_embutido{
+    grid-area: CSSembutido ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+
+#Sintaxe{
+    grid-area: Sintaxe ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+#Referencias{
+    grid-area: Referencias ;
+    width: 70vw;
+    height: 100vh;
+    margin-left: 20vw;
+    padding: 1%;
+}
+
+#navbar{
+    display: flex;
+    position: fixed;
+    max-width: 25vw;
+    height: 100vh;
+    background-color: rgb(36, 36, 36);
+    color: #cccccc;
+    padding: 2%;
+    margin: -2vmin;
+}
+
+
+code{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(226, 226, 226);
+}
+
+
+a{
+    font-size: 3vh;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+
+
+@media (min-height: 600px) {
+    #navbar{
+        display: flex;
+        flex-direction: column;
+    }
+}
